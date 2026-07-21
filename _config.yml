@@ -1,6 +1,6 @@
 title: Cristian Medina's Portfolio
 author: Cristian Medina
-url: https://camv.github.io/
+url: https://camv.github.io
 baseurl: ""
 markdown: kramdown
 description: > 
@@ -11,6 +11,8 @@ permalink: /:slug
 twitter:
   username: abhinav # update or delete this
   card: summary_large_image
+
+remote_theme: abhinavs/moonwalk
 
 theme_config:
   appearance: "dark" # can be "light", "dark" or "auto"
@@ -50,6 +52,7 @@ sass:
   style: :compressed
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag 
