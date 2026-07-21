@@ -10,11 +10,11 @@
       </time>
     {% endif %}
     {% if site.theme_config.show_reading_time == true %}
-      {% capture words %}{{ content | number_of_words | minus: 180 }}{% endcapture %}
-      {% unless words contains '-' %}
+      {% assign words = content | strip_html | strip_newlines | split: ' ' | size | minus: 180 %}
+      {% if words >= 0 %}
         <span class="post-meta-sep">·</span>
         <span class="post-meta-reading">{{ words | plus: 180 | divided_by: 180 }} min read</span>
-      {% endunless %}
+      {% endif %}
     {% endif %}
   </div>
 
