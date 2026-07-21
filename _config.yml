@@ -1,7 +1,7 @@
-url: https://www.abhinavsaxena.com # root address of the site
-baseurl: "/moonwalk/" # set to "/moonwalk" if hosting under a project subpath
+title: Cristian Medina's Portfolio
+author: Cristian Medina
 description: > # description of the site (multiple lines allowed)
-  Moonwalk is a fast and elegant Jekyll theme with a clean dark mode. It comes with horizontal list (for navbar and footer), card list (for portfolio), and a generic vertical list. It is very easy to modify in case you want to build over it - please see _layouts/home.html to do that.
+  A personal portfolio website showcasing my projects, skills, and experiences. Built with Jekyll based on the Moonwalk theme.
 
 permalink: /:slug
 
