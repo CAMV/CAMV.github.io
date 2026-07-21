@@ -1,35 +1,5 @@
-# --- OS / Editor ---
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
-.vscode/
-.idea/
-
-# --- Ruby / Bundler ---
-.bundle/
-vendor/bundle/
-rubyenv/
-.ruby-version
-.ruby-gemset
-
-# --- Jekyll build output ---
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-
-# --- Logs ---
-*.log
-
-# --- Node (if you use frontend tooling) ---
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# --- Env files ---
-.env
-.env.*
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+_site
