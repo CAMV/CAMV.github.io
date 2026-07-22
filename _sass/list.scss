@@ -20,12 +20,12 @@ ul.horizontal-list {
   .horizontal-list-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.1em;
     white-space: nowrap;
   }
 
   .horizontal-list-link img {
-    height: 1em;
+    height: 2em;
     width: auto;
     margin: 0;
     flex: 0 0 auto;
