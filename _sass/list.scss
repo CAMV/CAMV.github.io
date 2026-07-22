@@ -36,7 +36,7 @@ ul.horizontal-list {
 .card {
   padding: 1em;
   border: 1px var(--text) solid;
-  width: 11em;
+  width: 16.5em;
   height: auto;
   overflow: hidden;
   text-align: center;
@@ -44,7 +44,7 @@ ul.horizontal-list {
   align-items: center;
   background-color: var(--bg-secondary);
   margin-bottom: 0.8em;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
 
   a {
     display: block;
@@ -55,6 +55,7 @@ ul.horizontal-list {
     width: 100%;
     max-width: 100%;
     height: auto;
+    margin: 0;
   }
 
   .header {

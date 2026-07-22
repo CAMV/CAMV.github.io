@@ -67,7 +67,7 @@ img {
   html, body {
       --bg: #FFF;
       --bg-secondary: #f3f4f6;
-      --headings: #1e293b;
+      --headings: #b49a05;;
       --text: #374151;
       --text-secondary: #6b7280;
       --links: #b49a05;
@@ -84,7 +84,7 @@ img {
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
   html, body  {
-      --headings: #74c0fc;
+      --headings: #E4D555;
       --links: #E4D555;
       --highlight: #ebe081;
       --bg: #1f242A;
