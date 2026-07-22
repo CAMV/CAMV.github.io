@@ -75,6 +75,11 @@ img {
       --code-text: #9D174D;
       --share-text: #999;
   }
+
+  svg {
+    fill: var(--text);
+  }
+  
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -89,6 +94,10 @@ img {
       --code-text: #91A7FF;
       --share-text: #C4C4C4;
   };
+
+  svg {
+    fill: var(--text);
+  }
 }
 
 html[data-theme="dark"] { @include dark-appearance; }
