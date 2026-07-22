@@ -3,7 +3,7 @@ navbar_entries:
     url: about
 
   - title: LinkedIn
-    icon: assets/icons/linkedin.svg
+    icon: fa-brands fa-linkedin
     url: https://www.linkedin.com/in/cristian-medina-256140b5/
 
   - title: Resume

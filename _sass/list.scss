@@ -34,12 +34,24 @@ ul.horizontal-list {
   border: 1px var(--text) solid;
   width: 11em;
   height: auto;
+  overflow: hidden;
   text-align: center;
   font-size: 1em;
   align-items: center;
   background-color: var(--bg-secondary);
   margin-bottom: 0.8em;
   border-radius: 0.5em;
+
+  a {
+    display: block;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
 
   .header {
     color: var(--links);
