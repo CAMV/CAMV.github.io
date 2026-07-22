@@ -1,24 +1,24 @@
 navbar_entries:
-  - title: about
+  - title: About
     url: about
 
-  - title: linkedin
+  - title: LinkedIn
     url: https://www.linkedin.com/in/cristian-medina-256140b5/
 
-  - title: resume
-    url: resume.pdf
+  - title: Resume
+    url: assets/cristian_medina_resume.pdf
 
 project_entries:
   - title: VIZARD
-    url: vizard
+    url: projects/vizard
     desc: This is an example project, configured in _data/home.yml
 
   - title: Jason Maxx
-    url: jason-maxx
+    url: projects/jason-maxx
     desc: Projects are shown in card layout
 
   - title: Spanish Safari
-    url: spanish-safari
+    url: projects/spanish-safari
     desc: You can control visibility from _config.yml file
 
 # old_project_entries:
@@ -41,22 +41,22 @@ project_entries:
 
 footer_entries:
 
-  - title: linkedin
+  - title: LinkedIn
     url: https://www.linkedin.com/in/cristian-medina-256140b5/
 
-  - title: itch
+  - title: Itch
     url: https://waunman.itch.io/
 
-  - title: nabos studios
+  - title: Nabos Studios
     url: https://nabos.io
     
   # - title: github
   #   url: https://github.com/CAMV
 
-  - title: feed
+  - title: Feed
     url: feed.xml
 
-  - title: llms.txt
+  - title: LLMS.txt
     url: llms.txt
 
 # misc_entries:
