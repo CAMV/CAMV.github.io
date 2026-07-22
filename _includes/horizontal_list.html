@@ -1,7 +1,7 @@
 <ul class="horizontal-list">
   {% for item in include.collection %}
     <li>
-      <a href="{{ item.url }}">
+      <a href="{{ item.url }}" class="horizontal-list-link">
         {% if item.icon %}
           <i class="fa fa-{{ item.icon }}"></i>
         {% endif %}

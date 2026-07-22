@@ -11,6 +11,7 @@ navbar_entries:
 
 project_entries:
   - title: VIZARD
+    video: assets/videos/vizard.mp4
     url: projects/vizard
     desc: This is an example project, configured in _data/home.yml
 
