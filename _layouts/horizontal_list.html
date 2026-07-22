@@ -1,0 +1,13 @@
+<ul class="horizontal-list">
+  {% for item in include.collection %}
+    <li>
+      <a href="{{ item.url }}">
+        {% if item.icon == true %}
+          <i class="fa fa-{{ item.icon_name }}"></i>
+        {% endif %}
+        {{ item.title }}
+      </a>
+      &nbsp;&nbsp;
+    </li>
+  {% endfor %}
+</ul>
