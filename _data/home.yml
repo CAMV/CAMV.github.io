@@ -1,0 +1,94 @@
+navbar_entries:
+  - title: about
+    url: about
+
+  - title: linkedin
+    url: https://www.linkedin.com/in/cristian-medina-256140b5/
+
+  - title: resume
+    url: resume.pdf
+
+project_entries:
+  - title: VIZARD
+    url: vizard
+    desc: This is an example project, configured in _data/home.yml
+
+  - title: Jason Maxx
+    url: jason-maxx
+    desc: Projects are shown in card layout
+
+  - title: Spanish Safari
+    url: spanish-safari
+    desc: You can control visibility from _config.yml file
+
+# old_project_entries:
+#   - title: Soopr
+#     url: https://www.soopr.co
+#     desc: Delight your readers - add beautiful share and like buttons easily to your websites 
+#     highlight: NEW
+
+#   - title: Cookie
+#     url: https://github.com/abhinavs/cookie
+#     desc: An open source landing website with supporting pages and integrated blog
+
+#   - title: Moonwalk
+#     url: https://github.com/abhinavs/moonwalk
+#     desc: A fast and minimalist Jekyll blog theme with clean dark mode
+
+#   - title: Humangous
+#     url: https://www.humangous.co
+#     desc: The better people know you, the better they collaborate
+
+footer_entries:
+
+  - title: linkedin
+    url: https://www.linkedin.com/in/cristian-medina-256140b5/
+
+  - title: itch
+    url: https://waunman.itch.io/
+
+  - title: nabos studios
+    url: https://nabos.io
+    
+  # - title: github
+  #   url: https://github.com/CAMV
+
+  - title: feed
+    url: feed.xml
+
+  - title: llms.txt
+    url: llms.txt
+
+# misc_entries:
+#   - title: this is an example vertical list
+#     url: false
+
+#   - title: you can show or hide using a boolean flag in _config.yml
+#     url: false
+
+#   - title: and you can add data in _data/home.yml
+#     url: false
+
+#   - title: Blog posts
+#     post_list: true
+#     url: false
+
+#   - title: moonwalk on the Internet
+#     url: false
+#     entries:
+#       - title: on Github
+#         url: https://github.com/abhinavs/moonwalk
+
+#       - title: originally built for abhinav's homepage
+#         url: https://www.abhinav.co
+
+#       - title: this list is scalable and can be nested
+#         url: false
+#         entries:
+#           - title: this is nested inside a nested list
+#             url: false
+
+#           - title: it is easy to use, see _data/home.yml to see how to configure it.
+#             url: false
+
+
