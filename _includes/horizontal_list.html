@@ -2,8 +2,8 @@
   {% for item in include.collection %}
     <li>
       <a href="{{ item.url }}">
-        {% if item.icon == true %}
-          <i class="fa fa-{{ item.icon_name }}"></i>
+        {% if item.icon %}
+          <i class="fa fa-{{ item.icon }}"></i>
         {% endif %}
         {{ item.title }}
       </a>
