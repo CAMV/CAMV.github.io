@@ -2,8 +2,22 @@
   {% for item in include.collection %}
     <li>
       <a href="{{ item.url }}" class="horizontal-list-link">
-        {% if item.icon %}
-          <img src="{{ item.icon }}" />
+        {% assign has_theme_icons = item.icon_light or item.icon_dark %}
+        {% if has_theme_icons %}
+          {% if item.icon_light %}
+            <svg class="horizontal-list-icon horizontal-list-icon--light" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <image href="{{ item.icon_light }}" width="100" height="100" />
+            </svg>
+          {% endif %}
+          {% if item.icon_dark %}
+            <svg class="horizontal-list-icon horizontal-list-icon--dark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <image href="{{ item.icon_dark }}" width="100" height="100" />
+            </svg>
+          {% endif %}
+        {% elsif item.icon %}
+          <svg class="horizontal-list-icon" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+            <image href="{{ item.icon }}" width="100" height="100" />
+          </svg>
         {% endif %}
         {{ item.title }}
       </a>

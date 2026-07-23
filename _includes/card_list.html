@@ -1,30 +1,54 @@
-<ul class="horizontal-list">
+<ul class="card-grid">
   {% for item in include.collection %}
 
     <li class="card">
       <a href="{{ item.url }}">
         {% if item.video %}
-          <video autoplay muted loop playsinline preload="metadata">
-            <source src="{{ item.video }}">
-          </video>
-        {% endif %}
+        <div class="card-video-container">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="{{ item.video }}">
+            </video>
+            <hr />
+        </div>
+       {% endif %}
+        <div class="card-description-container">
+          <span class="header">
+            {{ item.title }} 
+            
+            {% if item.year %}
+              ({{item.year}})
+            {% endif %}
 
-        <span class="header">
-          {{ item.title }}
+            {% if item.highlight %}
+              <mark>{{ item.highlight }}</mark>
+            {% endif %}
 
-          {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
+          </span>
+
+          {% if item.desc != false %}
+          <p class="body">
+            {{ item.desc }}
+          </p>
           {% endif %}
 
-        </span>
+          {% if item.capsules_primary and item.capsules_primary.size > 0 %}
+          <span class="capsule-group-header">{{ site.theme_config.home.title_primary_capsules }}</span>
+          <div class="capsule-group capsule-group-primary">
+            {% for capsule in item.capsules_primary %}
+              <span class="capsule">{{ capsule }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
 
-        <hr />
-
-        {% if item.desc != false %}
-        <p class="body">
-          {{ item.desc }}
-        </p>
-        {% endif %}
+          {% if item.capsules_secondary and item.capsules_secondary.size > 0 %}
+          <span class="capsule-group-header">{{ site.theme_config.home.title_secondary_capsules }}</span>
+          <div class="capsule-group capsule-group-secondary">
+            {% for capsule in item.capsules_secondary %}
+              <span class="capsule">{{ capsule }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
       </a>
     </li>
 

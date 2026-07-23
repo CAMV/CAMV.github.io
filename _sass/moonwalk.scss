@@ -32,7 +32,7 @@ p { margin: 1em 0; }
 li { margin: 0.4em 0; }
 
 .w {
-  max-width: 720px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 4em 2em;
 }
@@ -67,19 +67,16 @@ img {
   html, body {
       --bg: #FFF;
       --bg-secondary: #f3f4f6;
-      --headings: #b49a05;;
+      --headings: #967a00;;
       --text: #374151;
       --text-secondary: #6b7280;
-      --links: #b49a05;
-      --highlight: #FFECB2; // light yellow
+      --links: #967a00;
+      --highlight: #ffd862; // light yellow
       --code-text: #9D174D;
       --share-text: #999;
   }
 
-  svg {
-    fill: #374151;
-  }
-  
+ 
 }
 // -------------- THEME SWITCHER -------------- //
 @mixin dark-appearance {
@@ -95,9 +92,7 @@ img {
       --share-text: #C4C4C4;
   };
 
-  svg {
-    fill: #adb5bd;
-  }
+
 }
 
 html[data-theme="dark"] { @include dark-appearance; }

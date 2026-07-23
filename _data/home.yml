@@ -3,7 +3,8 @@ navbar_entries:
     url: about
 
   - title: LinkedIn
-    icon: assets/icons/linkedin.svg
+    icon_light: assets/icons/linkedin_light.svg
+    icon_dark: assets/icons/linkedin_dark.svg
     url: https://www.linkedin.com/in/cristian-medina-256140b5/
 
   - title: Resume
@@ -11,9 +12,24 @@ navbar_entries:
 
 project_entries:
   - title: VIZARD
+    year: 2026
+    highlight: WIP
     video: assets/videos/vizard.mp4
     url: projects/vizard
-    desc: This is an example project, configured in _data/home.yml
+    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    capsules_primary:
+      - Unity
+      - C#
+      - PC
+      - Unity
+      - C#
+      - PC
+      - Unity
+      - C#
+      - PC
+    capsules_secondary:
+      - Solo Dev
+      - 2026
 
   - title: Jason Maxx
     url: projects/jason-maxx
