@@ -1,5 +1,7 @@
 navbar_entries:
   - title: About
+    icon_light: assets/icons/about_light.svg
+    icon_dark: assets/icons/about_dark.svg
     url: about
 
   - title: LinkedIn
@@ -7,8 +9,21 @@ navbar_entries:
     icon_dark: assets/icons/linkedin_dark.svg
     url: https://www.linkedin.com/in/cristian-medina-256140b5/
 
+  - title: Itch.io
+    icon_light: assets/icons/itch_light.svg
+    icon_dark: assets/icons/itch_dark.svg
+    url: https://waunman.itch.io/
+
+
   - title: Resume
+    icon_light: assets/icons/resume_light.svg
+    icon_dark: assets/icons/resume_dark.svg
     url: assets/cristian_medina_resume.pdf
+
+  - title: Email
+    icon_light: assets/icons/email_light.svg
+    icon_dark: assets/icons/email_dark.svg
+    url: mailto:cmedina270793@gmail.com
 
 project_entries:
   - title: VIZARD
@@ -38,6 +53,31 @@ project_entries:
   - title: Spanish Safari
     url: projects/spanish-safari
     desc: You can control visibility from _config.yml file
+
+skills:
+  - title: Game Engines
+    icon_light: assets/icons/game-engine_light.svg
+    icon_dark: assets/icons/game-engine_dark.svg
+    skillset:
+      - Unity
+      - Unreal Engine
+      - Gameplay Systems
+
+  - title: Programming
+    icon_light: assets/icons/code_light.svg
+    icon_dark: assets/icons/code_dark.svg
+    skillset:
+      - C#
+      - Python
+      - Lua
+
+  - title: Platforms
+    icon_light: assets/icons/pc_light.svg
+    icon_dark: assets/icons/pc_dark.svg
+    skillset:
+      - PC
+      - Linux
+      - Mobile
 
 # old_project_entries:
 #   - title: Soopr

@@ -9,12 +9,32 @@ layout: default
 {% endif %}
 
   <h1>{{ site.title }}</h1>
-  {% if site.theme_config.show_description == true %}
-    <p>{{ site.description }}</p>
+  <h5>{{ site.subtitle }}</h5>
+
+  {% assign show_description = site.theme_config.show_description == true %}
+  {% assign show_skill = site.theme_config.show_skill == true and site.data.home.skills and site.data.home.skills.size > 0 %}
+
+  {% if show_description or show_skill %}
+  <div class="home-intro-grid{% if show_skill == false %} home-intro-grid--single{% endif %}">
+    {% if show_description %}
+    <div class="home-intro-description">
+      <p>{{ site.description }}</p>
+    </div>
+    {% endif %}
+
+    {% if show_skill %}
+    <div class="home-intro-skills">
+      <h2>{{ site.theme_config.home.title_skills }}</h2>
+      {% include skills_list.html collection=site.data.home.skills %}
+    </div>
+    {% endif %}
+  </div>
   {% endif %}
 </header>
 
 {{ content }}
+
+
 
 {% if site.theme_config.show_projects == true %}
   <h2>{{ site.theme_config.home.title_projects }}</h2>

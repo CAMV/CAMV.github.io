@@ -73,9 +73,113 @@ html[data-theme="light"] .horizontal-list-icon--dark {
   }
 }
 
+.home-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20em, 1fr);
+  gap: 1em 2em;
+  align-items: start;
+}
+
+.home-intro-grid--single {
+  grid-template-columns: 1fr;
+}
+
+.home-intro-description p {
+  margin-top: 0.3em;
+}
+
+.home-intro-skills h2 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.skills-panel {
+  display: grid;
+  gap: 0.7em;
+}
+
+.skills-section {
+  border: 1px solid var(--text-secondary);
+  border-radius: 0.35em;
+  background-color: var(--bg-secondary);
+  padding: 0.6em 0.7em;
+}
+
+.skills-section-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-weight: 700;
+  color: var(--links);
+}
+
+.skills-section-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex: 0 0 auto;
+}
+
+.skills-section-icon--dark {
+  display: none;
+}
+
+html[data-theme="dark"] .skills-section-icon--light {
+  display: none;
+}
+
+html[data-theme="dark"] .skills-section-icon--dark {
+  display: inline-block;
+}
+
+html[data-theme="light"] .skills-section-icon--light {
+  display: inline-block;
+}
+
+html[data-theme="light"] .skills-section-icon--dark {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  body[data-theme="auto"] .skills-section-icon--light {
+    display: none;
+  }
+
+  body[data-theme="auto"] .skills-section-icon--dark {
+    display: inline-block;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body[data-theme="auto"] .skills-section-icon--light {
+    display: inline-block;
+  }
+
+  body[data-theme="auto"] .skills-section-icon--dark {
+    display: none;
+  }
+}
+
+.skills-capsule-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.5em;
+}
+
+.skills-capsule {
+  display: inline-block;
+  padding: 0.2em 0.7em;
+  border-radius: 999px;
+  font-size: 0.7em;
+  line-height: 1.4;
+  border: 1px solid var(--text-secondary);
+  color: var(--text);
+  background-color: var(--bg);
+}
+
 ul.card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16.5em, 1fr));
+  grid-template-columns: repeat(2, minmax(16.5em, 1fr));
   gap: 0.8em 1em;
   margin-top: 0em;
   margin-left: 0;
@@ -167,8 +271,8 @@ ul.card-grid {
     flex-wrap: wrap;
     gap: 0.4em;
     justify-content: flex-start;
-    margin-top: 0.6em;
-    margin-bottom: 0.6em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
 
   }
 
@@ -194,6 +298,11 @@ ul.card-grid {
 
 /* Responsive cards - one column layout on small screens */
 @media screen and (max-width: 600px) {
+  .home-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 0.7em;
+  }
+
   ul.card-grid {
     grid-template-columns: 1fr;
   }
