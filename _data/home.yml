@@ -33,51 +33,137 @@ project_entries:
     url: projects/vizard
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     capsules_primary:
-      - Unity
-      - C#
-      - PC
-      - Unity
-      - C#
-      - PC
-      - Unity
-      - C#
-      - PC
+      - Camera Controller
+      - UI
+      - Game Mechanics
     capsules_secondary:
-      - Solo Dev
-      - 2026
+      - Unity
+      - C#
+      - Blender
+      - Audacity
+      - Bakery
 
   - title: Jason Maxx
-    url: projects/jason-maxx
-    desc: Projects are shown in card layout
+    year: 2025
+    video: assets/videos/vizard.mp4
+    url: projects/vizard
+    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    capsules_primary:
+      - Camera Controller
+      - UI
+      - Game Mechanics
+    capsules_secondary:
+      - Unity
+      - C#
+      - Blender
+      - Audacity
+      - Bakery
+
+  - title: Designaar Kitchen Designer
+    year: 2025
+    video: assets/videos/vizard.mp4
+    url: projects/vizard
+    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    capsules_primary:
+      - Camera Controller
+      - UI
+      - Game Mechanics
+    capsules_secondary:
+      - Unity
+      - C#
+      - Blender
+      - Audacity
+      - Bakery
 
   - title: Spanish Safari
-    url: projects/spanish-safari
-    desc: You can control visibility from _config.yml file
+    video: assets/videos/vizard.mp4
+    url: projects/vizard
+    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    capsules_primary:
+      - Camera Controller
+      - UI
+      - Game Mechanics
+    capsules_secondary:
+      - Unity
+      - C#
+      - Blender
+      - Audacity
+      - Bakery
 
 skills:
   - title: Game Engines
-    icon_light: assets/icons/game-engine_light.svg
-    icon_dark: assets/icons/game-engine_dark.svg
+    icon_light: assets/icons/pc_light.svg
+    icon_dark: assets/icons/pc_dark.svg
     skillset:
       - Unity
       - Unreal Engine
-      - Gameplay Systems
+      - Game Maker
 
-  - title: Programming
+  - title: Programming Languages
     icon_light: assets/icons/code_light.svg
     icon_dark: assets/icons/code_dark.svg
     skillset:
       - C#
       - Python
-      - Lua
+      - JavaScript
+      - HTML
+      - CSS
 
-  - title: Platforms
-    icon_light: assets/icons/pc_light.svg
-    icon_dark: assets/icons/pc_dark.svg
+  - title: Game Development
+    icon_light: assets/icons/game-engine_light.svg
+    icon_dark: assets/icons/game-engine_dark.svg
     skillset:
-      - PC
-      - Linux
-      - Mobile
+      - Physics
+      - Gameplay Systems
+      - GUI Implementation
+      - Content Integration
+      - Debugging
+      - Development Testing
+      - Mobile Optimization
+
+  - title: Backend
+    icon_light: assets/icons/back-end_light.svg
+    icon_dark: assets/icons/back-end_dark.svg
+    skillset:
+      - PostgreSQL
+      - CI/CD
+      - FastAPI
+
+  - title: Assets Tools
+    icon_light: assets/icons/assets-tools_light.svg
+    icon_dark: assets/icons/assets-tools_dark.svg
+    skillset:
+      - Blender
+      - Substance Designer
+      - Paint.net
+
+  - title: Frameworks
+    icon_light: assets/icons/framework_light.svg
+    icon_dark: assets/icons/framework_dark.svg
+    skillset:
+      - Magento
+      - BigCommerce
+
+  - title: Collaboration & Production
+    icon_light: assets/icons/collaboration_light.svg
+    icon_dark: assets/icons/collaboration_dark.svg
+    skillset:
+      - Git
+      - Jira
+      - Confluence
+      - Kanban
+      - Notion
+      - Agile Development
+      - Slack
+      - Obsidian
+
+  - title: Languages
+    icon_light: assets/icons/languages_light.svg
+    icon_dark: assets/icons/languages_dark.svg
+    skillset:
+      - Spanish (Native)
+      - English (Full Professional)
+
 
 # old_project_entries:
 #   - title: Soopr

@@ -17,6 +17,22 @@ pre, code {
 
 h2, h3, h4, h5 { margin-top: 1.5em; }
 
+.title {
+  font-family: "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
+  font-weight: bold;
+  color : var(--headings);
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.subtitles {
+  font-size: 1em;
+  color: var(--text-secondary);
+  margin-top: -1.5em;
+  margin-bottom: 1.5em;
+}
+
 hr { margin: 1em 0; }
 
 hr.page-break {

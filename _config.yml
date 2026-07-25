@@ -1,11 +1,14 @@
 title: Cristian Medina's Portfolio
-subtitle: Game Developer | Programmer | Designer  
+subtitle: Game Developer | Computer Engineer | 3D Hobbyist  
 author: Cristian Medina
 url: https://camv.github.io
 baseurl: ""
 markdown: kramdown
 description: > 
-  A personal portfolio website showcasing my projects, skills, and experiences. Built with Jekyll based on the Moonwalk theme.
+  I’m a Unity Game Developer and Computer Engineer with experience leading the development of gameplay systems,
+  tools, content integration, debugging, and team coordination across video games and interactive applications. My
+  background includes Unity, C#, Python, Blender workflows, and cross-functional production in remote team
+  environments.
 
 permalink: /:slug
 
@@ -24,7 +27,7 @@ theme_config:
   show_skill: true # show skills panel in home header, add in _data/home.yml under skills
   show_blog: false # show blog posts added in _posts
   show_old_projects: false # show old projects as cards, add in _data/home.yml
-  show_misc_list: true # show generic vertical list for misc details, add _data/home.yml
+  show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
   show_reading_time: true # show number of words and reading time in the blog posts
   show_tags: true # show tags in a blog posts
   show_code_copy: true # show copy button on code blocks

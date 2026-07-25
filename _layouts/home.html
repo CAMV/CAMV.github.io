@@ -8,8 +8,8 @@ layout: default
   <div class="dashed"></div>
 {% endif %}
 
-  <h1>{{ site.title }}</h1>
-  <h5>{{ site.subtitle }}</h5>
+  <p class="title">{{ site.title }}</p>
+  <p class="subtitles">{{ site.subtitle }}</p>
 
   {% assign show_description = site.theme_config.show_description == true %}
   {% assign show_skill = site.theme_config.show_skill == true and site.data.home.skills and site.data.home.skills.size > 0 %}
@@ -24,7 +24,6 @@ layout: default
 
     {% if show_skill %}
     <div class="home-intro-skills">
-      <h2>{{ site.theme_config.home.title_skills }}</h2>
       {% include skills_list.html collection=site.data.home.skills %}
     </div>
     {% endif %}
