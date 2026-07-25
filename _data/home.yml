@@ -14,6 +14,10 @@ navbar_entries:
     icon_dark: assets/icons/itch_dark.svg
     url: https://waunman.itch.io/
 
+  - title: Sketchfab
+    icon_light: assets/icons/sketchfab_light.svg
+    icon_dark: assets/icons/sketchfab_dark.svg
+    url: https://sketchfab.com/WaunMan
 
   - title: Resume
     icon_light: assets/icons/resume_light.svg
@@ -27,11 +31,14 @@ navbar_entries:
 
 project_entries:
   - title: VIZARD
-    year: 2026
+    year: FEB 2026 - JUL 2026
     highlight: WIP
     video: assets/videos/vizard.mp4
     url: projects/vizard
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    platforms:
+      - name: itch
+        url: https://miraclejester.itch.io/vizard
     capsules_primary:
       - Camera Controller
       - UI
@@ -48,6 +55,7 @@ project_entries:
     video: assets/videos/vizard.mp4
     url: projects/vizard
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    itch: false
     capsules_primary:
       - Camera Controller
       - UI
@@ -185,14 +193,14 @@ skills:
 
 footer_entries:
 
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/cristian-medina-256140b5/
+  # - title: LinkedIn
+  #   url: https://www.linkedin.com/in/cristian-medina-256140b5/
 
-  - title: Itch
-    url: https://waunman.itch.io/
+  # - title: Itch
+  #   url: https://waunman.itch.io/
 
-  - title: Nabos Studios
-    url: https://nabos.io
+  # - title: Nabos Studios
+  #   url: https://nabos.io
     
   # - title: github
   #   url: https://github.com/CAMV

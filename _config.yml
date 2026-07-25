@@ -1,4 +1,4 @@
-title: Cristian Medina's Portfolio
+title: Cristian Medina
 subtitle: Game Developer | Computer Engineer | 3D Hobbyist  
 author: Cristian Medina
 url: https://camv.github.io
@@ -41,11 +41,26 @@ theme_config:
   home:
     title_projects: Portfolio
     title_skills: Skills
-    title_misc_list: Skills
+    title_misc_list: Misc List
     title_blog: Blog
     title_old_projects: Old Projects
     title_primary_capsules: Contributions
     title_secondary_capsules: Tools
+    project_learn_more: Learn More
+  platforms:
+    title_steam: Steam
+    title_itch: Itch.io
+    title_playstore: Android
+    title_appstore: iOS
+  icons:
+    steam_light: assets/icons/steam_light.svg
+    steam_dark: assets/icons/steam_dark.svg
+    itch_light: assets/icons/itch_light.svg
+    itch_dark: assets/icons/itch_dark.svg
+    playstore_light: assets/icons/googleplay_light.svg
+    playstore_dark: assets/icons/googleplay_dark.svg
+    appstore_light: assets/icons/appstore_light.svg
+    appstore_dark: assets/icons/appstore_dark.svg
 
 
 soopr:

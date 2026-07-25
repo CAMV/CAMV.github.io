@@ -10,46 +10,73 @@
             </video>
             <hr />
         </div>
-       {% endif %}
-        <div class="card-description-container">
-          <span class="header">
-            {{ item.title }} 
-            
-            {% if item.year %}
-              ({{item.year}})
-            {% endif %}
-
-            {% if item.highlight %}
-              <mark>{{ item.highlight }}</mark>
-            {% endif %}
-
-          </span>
-
-          {% if item.desc != false %}
-          <p class="body">
-            {{ item.desc }}
-          </p>
-          {% endif %}
-
-          {% if item.capsules_primary and item.capsules_primary.size > 0 %}
-          <span class="capsule-group-header">{{ site.theme_config.home.title_primary_capsules }}</span>
-          <div class="capsule-group capsule-group-primary">
-            {% for capsule in item.capsules_primary %}
-              <span class="capsule">{{ capsule }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-
-          {% if item.capsules_secondary and item.capsules_secondary.size > 0 %}
-          <span class="capsule-group-header">{{ site.theme_config.home.title_secondary_capsules }}</span>
-          <div class="capsule-group capsule-group-secondary">
-            {% for capsule in item.capsules_secondary %}
-              <span class="capsule">{{ capsule }}</span>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
       </a>
+      {% endif %}
+      <div class="card-description-container">
+        <span class="header">
+          {{ item.title }} 
+
+          {% if item.highlight %}
+            <mark>{{ item.highlight }}</mark>
+          {% endif %}
+          
+          {% if item.year %}
+          <span class="dark-capsule">
+              {{item.year}}
+          </span>
+          {% endif %}
+
+        </span>
+
+        {% if item.desc != false %}
+        <p class="body">
+          {{ item.desc }}
+        </p>
+        {% endif %}
+
+        <div class="platform-links">
+        {% for platform in item.platforms %}
+
+          {% assign key = platform.name %}
+          {% assign light_icon_key = key | append: '_light' %}
+          {% assign dark_icon_key = key | append: '_dark' %}
+          {% assign title_key = 'title_' | append: key %}
+
+          <a href="{{ platform.url }}" class="platform-link" target="_blank" rel="noopener noreferrer">
+            <svg class="platform-icon platform-icon--light">
+              <image href="{{ site.theme_config.icons[light_icon_key] }}"/>
+            </svg>
+            <svg class="platform-icon platform-icon--dark">
+              <image href="{{ site.theme_config.icons[dark_icon_key] }}" />
+            </svg>
+            <span class="platform-text">{{ site.theme_config.platforms[title_key] }}</span>
+          </a>
+
+        {% endfor %}
+        </div>
+
+
+        {% if item.capsules_primary and item.capsules_primary.size > 0 %}
+        <span class="capsule-group-header">{{ site.theme_config.home.title_primary_capsules }}</span>
+        <div class="capsule-group capsule-group-primary">
+          {% for capsule in item.capsules_primary %}
+            <span class="capsule">{{ capsule }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if item.capsules_secondary and item.capsules_secondary.size > 0 %}
+        <span class="capsule-group-header">{{ site.theme_config.home.title_secondary_capsules }}</span>
+        <div class="capsule-group capsule-group-secondary">
+          {% for capsule in item.capsules_secondary %}
+            <span class="capsule">{{ capsule }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      <!-- <a href="{{ item.url }}">
+
+      </a> -->
     </li>
 
   {% endfor %}
