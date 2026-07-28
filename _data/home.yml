@@ -27,7 +27,7 @@ navbar_entries:
   - title: Email
     icon_light: assets/icons/email_light.svg
     icon_dark: assets/icons/email_dark.svg
-    url: mailto:cmedina270793@gmail.com
+    url: mailto:waunman@gmail.com
 
 project_entries:
   - title: VIZARD
