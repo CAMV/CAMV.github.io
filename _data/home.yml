@@ -51,8 +51,8 @@ project_entries:
       - Bakery
 
   - title: Jason Maxx
-    year: 2025
-    video: assets/videos/vizard.mp4
+    year: JUL 2024 - OCT 2025
+    video: assets/videos/jason-maxx.mp4
     url: projects/vizard
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     itch: false
@@ -67,10 +67,10 @@ project_entries:
       - Audacity
       - Bakery
 
-  - title: Designaar Kitchen Designer
-    year: 2025
-    video: assets/videos/vizard.mp4
-    url: projects/vizard
+  - title: Kitchen Builder
+    year: AUG 2020 - JUN 2024
+    video: assets/videos/designaar.mp4
+    url: projects/kitchen-builder
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     capsules_primary:
       - Camera Controller
@@ -84,8 +84,9 @@ project_entries:
       - Bakery
 
   - title: Spanish Safari
-    video: assets/videos/vizard.mp4
-    url: projects/vizard
+    video: assets/videos/spanish-safari.mp4
+    year: MAR 2016 - AUG 2020
+    url: projects/spanish-safari
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     capsules_primary:
       - Camera Controller
@@ -100,16 +101,14 @@ project_entries:
 
 skills:
   - title: Game Engines
-    icon_light: assets/icons/pc_light.svg
-    icon_dark: assets/icons/pc_dark.svg
+    icon: pc
     skillset:
       - Unity
       - Unreal Engine
       - Game Maker
 
   - title: Programming Languages
-    icon_light: assets/icons/code_light.svg
-    icon_dark: assets/icons/code_dark.svg
+    icon: code
     skillset:
       - C#
       - Python
@@ -118,8 +117,7 @@ skills:
       - CSS
 
   - title: Game Development
-    icon_light: assets/icons/game-engine_light.svg
-    icon_dark: assets/icons/game-engine_dark.svg
+    icon: game
     skillset:
       - Physics
       - Gameplay Systems
@@ -130,31 +128,29 @@ skills:
       - Mobile Optimization
 
   - title: Backend
-    icon_light: assets/icons/back-end_light.svg
-    icon_dark: assets/icons/back-end_dark.svg
+    icon: back-end
     skillset:
       - PostgreSQL
       - CI/CD
       - FastAPI
 
   - title: Assets Tools
-    icon_light: assets/icons/assets-tools_light.svg
-    icon_dark: assets/icons/assets-tools_dark.svg
+    icon: assets-tools
     skillset:
       - Blender
       - Substance Designer
       - Paint.net
+      - Audacity
+      - DaVinci Resolve
 
   - title: Frameworks
-    icon_light: assets/icons/framework_light.svg
-    icon_dark: assets/icons/framework_dark.svg
+    icon: framework
     skillset:
       - Magento
       - BigCommerce
 
   - title: Collaboration & Production
-    icon_light: assets/icons/collaboration_light.svg
-    icon_dark: assets/icons/collaboration_dark.svg
+    icon: collaboration
     skillset:
       - Git
       - Jira
@@ -166,8 +162,7 @@ skills:
       - Obsidian
 
   - title: Languages
-    icon_light: assets/icons/languages_light.svg
-    icon_dark: assets/icons/languages_dark.svg
+    icon: languages
     skillset:
       - Spanish (Native)
       - English (Full Professional)
