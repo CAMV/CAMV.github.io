@@ -48,6 +48,8 @@ theme_config:
     title_primary_capsules: Contributions
     title_secondary_capsules: Tools
     project_learn_more: Learn More
+    skills_slide_window_size: 3
+    skills_slide_step_size: 1
   platforms:
     title_steam: Steam
     title_itch: Itch.io

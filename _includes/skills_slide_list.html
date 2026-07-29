@@ -1,148 +1,59 @@
-{% assign auto_slide_ms = site.theme_config.home.skills_slide_interval_ms | default: 5000 %}
-<div class="skills-card-panel skills-slideshow" data-skills-slideshow data-slide-ms="{{ auto_slide_ms }}">
-  <p class="skills-title">{{ site.theme_config.home.title_skills }}</p>
+<script src="{{ '/assets/js/skills-slideshow.js' | relative_url }}" defer></script>
 
-  <div class="skills-slideshow-viewport" aria-live="polite">
-    {% for section in include.collection %}
-      <article
-        class="skills-section skills-slide{% if forloop.first %} is-active{% endif %}"
-        data-skill-slide
-        role="group"
-        aria-roledescription="slide"
-        aria-label="{{ forloop.index }} of {{ include.collection.size }}"
-        {% unless forloop.first %}hidden{% endunless %}
-      >
-        <div class="skills-section-header">
-          {% assign key = section.icon %}
-          {% assign light_icon_key = 'assets/icons/' | append: key | append: '_light.svg' %}
-          {% assign dark_icon_key = 'assets/icons/' | append: key | append: '_dark.svg' %}
+{% assign slide_window_size = site.theme_config.home.skills_slide_window_size | default: 3 %}
+{% assign slide_step_size = site.theme_config.home.skills_slide_step_size | default: 1 %}
 
-          {% if section.icon %}
-            <svg class="skills-section-icon skills-section-icon--light" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-              <image href="{{ light_icon_key }}" width="100" height="100" />
-            </svg>
-            <svg class="skills-section-icon skills-section-icon--dark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-              <image href="{{ dark_icon_key }}" width="100" height="100" />
-            </svg>
-          {% endif %}
-          <span>{{ section.title }}</span>
-        </div>
+<div class="skills-slideshow" data-skills-slideshow data-window-size="{{ slide_window_size }}" data-step-size="{{ slide_step_size }}">
+  <div class="skills-slideshow-shell">
+    <div class="skills-slideshow-viewport" aria-live="polite">
+      {% for section in include.collection %}
+        <article
+          class="skills-section skills-slide{% if forloop.first %} is-active{% endif %}"
+          data-skill-slide
+          data-slide-index="{{ forloop.index0 }}"
+          role="group"
+          aria-roledescription="slide"
+          aria-label="{{ forloop.index }} of {{ include.collection.size }}"
+        >
+          <div class="skills-section-header">
+            {% assign key = section.icon %}
+            {% assign light_icon_key = 'assets/icons/' | append: key | append: '_light.svg' %}
+            {% assign dark_icon_key = 'assets/icons/' | append: key | append: '_dark.svg' %}
 
-        {% if section.skillset and section.skillset.size > 0 %}
-          <div class="skills-capsule-group">
-            {% for skill in section.skillset %}
-              <span class="skills-capsule">{{ skill }}</span>
-            {% endfor %}
+            {% if section.icon %}
+              <svg class="skills-section-icon skills-section-icon--light" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <image href="{{ light_icon_key }}" width="100" height="100" />
+              </svg>
+              <svg class="skills-section-icon skills-section-icon--dark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <image href="{{ dark_icon_key }}" width="100" height="100" />
+              </svg>
+            {% endif %}
+            <span>{{ section.title }}</span>
           </div>
-        {% endif %}
-      </article>
-    {% endfor %}
+
+          {% if section.skillset and section.skillset.size > 0 %}
+            <div class="skills-capsule-group">
+              {% for skill in section.skillset %}
+                <span class="skills-capsule">{{ skill }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+
   </div>
 
   {% if include.collection and include.collection.size > 1 %}
     <div class="skills-slideshow-controls">
-      <button class="skills-slide-button" type="button" data-slide-prev aria-label="Previous skill">Prev</button>
-      <p class="skills-slide-status" data-slide-status>1 / {{ include.collection.size }}</p>
-      <button class="skills-slide-button" type="button" data-slide-next aria-label="Next skill">Next</button>
-    </div>
+      <button class="skills-slide-button skills-slide-button--prev" type="button" data-slide-prev aria-label="Previous skill">&larr;</button>
 
-    <div class="skills-slide-progress" aria-hidden="true">
-      <span class="skills-slide-progress-bar" data-slide-progress></span>
+      <!-- Dots Container -->
+      <div class="skills-dots-container" data-slide-dots aria-label="Slideshow breadcrumbs"></div>
+    
+      <button class="skills-slide-button skills-slide-button--next" type="button" data-slide-next aria-label="Next skill">&rarr;</button>
+    
     </div>
   {% endif %}
 </div>
 
-<script>
-  (function () {
-    if (window.__skillsSlideshowInitialized) {
-      return;
-    }
-    window.__skillsSlideshowInitialized = true;
-
-    var roots = document.querySelectorAll('[data-skills-slideshow]');
-
-    roots.forEach(function (root) {
-      var slides = root.querySelectorAll('[data-skill-slide]');
-      var prevButton = root.querySelector('[data-slide-prev]');
-      var nextButton = root.querySelector('[data-slide-next]');
-      var status = root.querySelector('[data-slide-status]');
-      var progressBar = root.querySelector('[data-slide-progress]');
-      var count = slides.length;
-
-      if (count < 2 || !prevButton || !nextButton) {
-        return;
-      }
-
-      var parsedDuration = parseInt(root.getAttribute('data-slide-ms'), 10);
-      var durationMs = Number.isFinite(parsedDuration) && parsedDuration > 0 ? parsedDuration : 5000;
-      var current = 0;
-      var timerId;
-
-      function restartProgress() {
-        if (!progressBar) {
-          return;
-        }
-
-        progressBar.style.transition = 'none';
-        progressBar.style.transform = 'scaleX(0)';
-
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            progressBar.style.transition = 'transform ' + durationMs + 'ms linear';
-            progressBar.style.transform = 'scaleX(1)';
-          });
-        });
-      }
-
-      function renderSlide(index) {
-        slides.forEach(function (slide, slideIndex) {
-          var isActive = slideIndex === index;
-
-          slide.classList.toggle('is-active', isActive);
-          slide.hidden = !isActive;
-        });
-
-        if (status) {
-          status.textContent = (index + 1) + ' / ' + count;
-        }
-      }
-
-      function goTo(index) {
-        current = (index + count) % count;
-        renderSlide(current);
-        restartProgress();
-      }
-
-      function startAutoPlay() {
-        if (timerId) {
-          clearInterval(timerId);
-        }
-        timerId = setInterval(function () {
-          goTo(current + 1);
-        }, durationMs);
-      }
-
-      prevButton.addEventListener('click', function () {
-        goTo(current - 1);
-        startAutoPlay();
-      });
-
-      nextButton.addEventListener('click', function () {
-        goTo(current + 1);
-        startAutoPlay();
-      });
-
-      root.addEventListener('mouseenter', function () {
-        clearInterval(timerId);
-      });
-
-      root.addEventListener('mouseleave', function () {
-        startAutoPlay();
-        restartProgress();
-      });
-
-      goTo(0);
-      startAutoPlay();
-    });
-  })();
-</script>

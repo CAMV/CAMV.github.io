@@ -1,16 +1,34 @@
 <ul class="card-grid">
   {% for item in include.collection %}
 
+    {% assign has_url = false %}
+    {% if item.url %}
+      {% assign has_url = true %}
+    {% endif %}
+
+    {% assign has_video = false %}
+    {% if item.video %}
+      {% assign has_video = true %}
+    {% endif %}
+
     <li class="card">
-      <a href="{{ item.url }}">
-        {% if item.video %}
-        <div class="card-video-container">
-            <video autoplay muted loop playsinline preload="metadata">
-              <source src="{{ item.video }}">
-            </video>
-            <hr />
+      {% if has_url %}
+        <a href="{{ item.url }}">
+      {% else %}
+        <div>
+      {% endif %}
+        {% if has_video %}
+          <div class="card-video-container">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="{{ item.video }}">
+              </video>
+              <hr />
+          </div>
+        {% endif %}
+      {% if has_url %}
+        </a>
+      {% else %}
         </div>
-      </a>
       {% endif %}
       <div class="card-description-container">
         <span class="header">

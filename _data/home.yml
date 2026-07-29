@@ -34,7 +34,7 @@ project_entries:
     year: FEB 2026 - JUL 2026
     highlight: WIP
     video: assets/videos/vizard.mp4
-    url: projects/vizard
+    # url: projects/vizard
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     platforms:
       - name: itch
@@ -53,7 +53,7 @@ project_entries:
   - title: Jason Maxx
     year: JUL 2024 - OCT 2025
     video: assets/videos/jason-maxx.mp4
-    url: projects/vizard
+    # url: projects/jason-maxx
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     itch: false
     capsules_primary:
@@ -70,23 +70,29 @@ project_entries:
   - title: Kitchen Builder
     year: AUG 2020 - JUN 2024
     video: assets/videos/designaar.mp4
-    url: projects/kitchen-builder
+    # url: projects/kitchen-builder
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     capsules_primary:
-      - Camera Controller
-      - UI
-      - Game Mechanics
+      - E-Commerce Configuration
+      - 3D Product Visualization
+      - Magento Integration
+      - CI/CD
+      - Frontend Development
+      - Backend Development
     capsules_secondary:
       - Unity
+      - UI Toolkit
       - C#
+      - PostgreSQL
       - Blender
-      - Audacity
-      - Bakery
+      - Magento
+      - FastAPI
+      - BigCommerce
 
   - title: Spanish Safari
     video: assets/videos/spanish-safari.mp4
     year: MAR 2016 - AUG 2020
-    url: projects/spanish-safari
+    # url: projects/spanish-safari
     desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
     capsules_primary:
       - Camera Controller
@@ -96,8 +102,6 @@ project_entries:
       - Unity
       - C#
       - Blender
-      - Audacity
-      - Bakery
 
 skills:
   - title: Game Engines
@@ -120,11 +124,9 @@ skills:
     icon: game
     skillset:
       - Physics
-      - Gameplay Systems
-      - GUI Implementation
+      - Gameplay
+      - GUI 
       - Content Integration
-      - Debugging
-      - Development Testing
       - Mobile Optimization
 
   - title: Backend
