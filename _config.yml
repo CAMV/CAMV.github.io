@@ -5,7 +5,7 @@ url: https://camv.github.io
 baseurl: ""
 markdown: kramdown
 description: > 
-  I’m a Unity Game Developer and Computer Engineer with experience leading the development of gameplay systems,
+  I'm a Unity Game Developer and Computer Engineer with experience leading the development of gameplay systems,
   tools, content integration, debugging, and team coordination across video games and interactive applications. My
   background includes Unity, C#, Python, Blender workflows, and cross-functional production in remote team
   environments.
@@ -55,6 +55,7 @@ theme_config:
     title_itch: Itch.io
     title_playstore: Android
     title_appstore: iOS
+    title_website: Website
   icons:
     steam_light: assets/icons/steam_light.svg
     steam_dark: assets/icons/steam_dark.svg
@@ -64,6 +65,8 @@ theme_config:
     playstore_dark: assets/icons/googleplay_dark.svg
     appstore_light: assets/icons/appstore_light.svg
     appstore_dark: assets/icons/appstore_dark.svg
+    website_light: assets/icons/website_light.svg
+    website_dark: assets/icons/website_dark.svg
 
 
 soopr:

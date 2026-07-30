@@ -1,8 +1,8 @@
 navbar_entries:
-  - title: About
-    icon_light: assets/icons/about_light.svg
-    icon_dark: assets/icons/about_dark.svg
-    url: about
+  # - title: About
+  #   icon_light: assets/icons/about_light.svg
+  #   icon_dark: assets/icons/about_dark.svg
+  #   url: about
 
   - title: LinkedIn
     icon_light: assets/icons/linkedin_light.svg
@@ -35,7 +35,7 @@ project_entries:
     highlight: WIP
     video: assets/videos/vizard.mp4
     # url: projects/vizard
-    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    desc: A mystery work-sim game where you play as a hacker trying to get the secrets of a shady corporation from your mobile workstation van. Using your hacking skills, navigate through the company files, organize your conspiracy corkboard, and solve complex puzzles.
     platforms:
       - name: itch
         url: https://miraclejester.itch.io/vizard
@@ -43,6 +43,9 @@ project_entries:
       - Camera Controller
       - UI
       - Game Mechanics
+      - Environment Design
+      - Asset Integration
+      - Shaders
     capsules_secondary:
       - Unity
       - C#
@@ -54,12 +57,21 @@ project_entries:
     year: JUL 2024 - OCT 2025
     video: assets/videos/jason-maxx.mp4
     # url: projects/jason-maxx
-    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
-    itch: false
+    desc: A comedy detective game, where you play as hardcore detective Jason Maxx. The city is dark, the suspects are weirdos, and the graphics party like it’s 1999. Explore, interrogate. Can Jason solve the mystery, even when absurdity takes over?
+    platforms:
+      - name: steam
+        url: https://store.steampowered.com/app/3745110
+      - name: website
+        url: https://nabos.io/
     capsules_primary:
       - Camera Controller
+      - Character Controller
       - UI
-      - Game Mechanics
+      - Environment Design
+      - Asset Integration
+      - Vfx
+      - Shaders
+      - Project Management
     capsules_secondary:
       - Unity
       - C#
@@ -71,7 +83,7 @@ project_entries:
     year: AUG 2020 - JUN 2024
     video: assets/videos/designaar.mp4
     # url: projects/kitchen-builder
-    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    desc: An e-commerce platform for kitchen design and visualization, allowing users to create their dream kitchen in 3D, customize layouts, and visualize products in real-time. Integrated with Magento for seamless product management and sales.
     capsules_primary:
       - E-Commerce Configuration
       - 3D Product Visualization
@@ -93,11 +105,21 @@ project_entries:
     video: assets/videos/spanish-safari.mp4
     year: MAR 2016 - AUG 2020
     # url: projects/spanish-safari
-    desc: This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml.  This is an example project, configured in _data/home.yml
+    desc: An educational mobile and web-browser game designed to teach Spanish to children through story-based interactive mini-games. The game features a variety of subjects and activities that promote language learning in a fun and effective way.
+    platforms:
+      - name: appstore
+        url: https://apps.apple.com/us/app/spanish-safari-for-kids/id1126215060
+      - name: website
+        url: https://www.learnsafari.com/
     capsules_primary:
-      - Camera Controller
+      - Mini Games
+      - Asset Bundles
+      - Content Integration
+      - Mobile Optimization
       - UI
-      - Game Mechanics
+      - Shaders
+      - Character Controllers
+      - Project Management
     capsules_secondary:
       - Unity
       - C#

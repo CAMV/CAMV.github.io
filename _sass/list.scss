@@ -24,6 +24,10 @@ ul.horizontal-list {
     align-items: center;
     gap: 0.1em;
     white-space: nowrap;
+    text-underline-offset: 0.2em;
+    &:hover  {
+      text-decoration: underline;
+    }
   }
 
   .horizontal-list-link svg {
@@ -174,6 +178,8 @@ ul.card-grid {
 
 }
 
+
+
 .dark-capsule {
   display: inline-block;
   padding: 0.2em 0.7em;
@@ -210,22 +216,23 @@ ul.card-grid {
   }
 
   .header {
-    display: block;
-    text-align: left;
+    display: flex;             /* Changed from display: block */
+    align-items: center;       /* Vertically centers title, highlight, and date */
+    justify-content: space-between; /* Pushes title to the left and date to the right */
+    white-space: nowrap;       /* Prevents wrapping to a new line */
+    gap: 0.5em;                /* Adds spacing between title elements and the date */
+    width: 100%;
+
     font-weight: bold;
     font-size: 1.4em;
     color: var(--links);
- 
-    .dark-capsule {
-      float: right;
-      margin-top: 0.75em;
-    }
 
     mark {
       position: relative;
       font-weight: 500;
       font-size: 0.7em;
       padding: 0.45em;
+      flex-shrink: 0;           /* Optional: Keeps highlight badge from squishing */
     }
   }
 
@@ -289,6 +296,13 @@ ul.card-grid {
   }
 }
 
+.card-date {
+  flex-shrink: 1;             /* Changed from 0 to 1 to allow shrinking when space is tight */
+  min-width: 0;               /* Allows flex item text truncation/shrinking below intrinsic width */
+  overflow: hidden;           /* Keeps overflowing content tidy */
+  text-overflow: ellipsis;    /* Adds "..." if text is squeezed too small */
+}
+
 .card .platform-link {
   display: inline-flex;
   flex-direction: row;
@@ -300,15 +314,24 @@ ul.card-grid {
   white-space: nowrap;
 
   .platform-icon {
-    display: block;
     width: 2em;
     height: 2em;
     flex-shrink: 0;
+    margin-top: -.15em;
   }
 
   .platform-icon image {
     width: 100%;
     height: 100%;
+
+
+  }
+
+  #website {
+    x: 5%;
+    y: 5%;
+    width: 90%;
+    height: 90%;
   }
 
   .platform-text {

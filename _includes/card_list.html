@@ -32,14 +32,16 @@
       {% endif %}
       <div class="card-description-container">
         <span class="header">
-          {{ item.title }} 
+          <span>
+            {{ item.title }} 
 
-          {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
-          {% endif %}
-          
+            {% if item.highlight %}
+              <mark>{{ item.highlight }}</mark>
+            {% endif %}
+          </span>
+
           {% if item.year %}
-          <span class="dark-capsule">
+          <span class="dark-capsule card-date">
               {{item.year}}
           </span>
           {% endif %}
@@ -62,10 +64,10 @@
 
           <a href="{{ platform.url }}" class="platform-link" target="_blank" rel="noopener noreferrer">
             <svg class="platform-icon platform-icon--light">
-              <image href="{{ site.theme_config.icons[light_icon_key] }}"/>
+              <image href="{{ site.theme_config.icons[light_icon_key] }}" id="{{ key }}"/>
             </svg>
             <svg class="platform-icon platform-icon--dark">
-              <image href="{{ site.theme_config.icons[dark_icon_key] }}" />
+              <image href="{{ site.theme_config.icons[dark_icon_key] }}" id="{{ key }}"/>
             </svg>
             <span class="platform-text">{{ site.theme_config.platforms[title_key] }}</span>
           </a>
