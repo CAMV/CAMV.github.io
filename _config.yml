@@ -14,6 +14,14 @@ permalink: /:slug
 
 remote_theme: abhinavs/moonwalk
 
+collections:
+  skills:
+    output: true
+  projects:
+    output: true
+  misc_projects:
+    output: true
+
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
   appearance_toggle: true # if appearance can be switched by user
@@ -83,3 +91,13 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+markdown_output:
+  collections: [posts, projects, skills, misc_projects]
+
+llms_output:
+  index:
+    enabled: false
+  full:
+    collections: [posts, projects, skills, misc_projects]
+    respect_markdown_output: true

@@ -1,18 +1,13 @@
 <ul class="card-grid">
   {% for item in include.collection %}
 
-    {% assign has_url = false %}
-    {% if item.url %}
-      {% assign has_url = true %}
-    {% endif %}
-
     {% assign has_video = false %}
     {% if item.video %}
       {% assign has_video = true %}
     {% endif %}
 
     <li class="card">
-      {% if has_url %}
+      {% if item.showpost %}
         <a href="{{ item.url }}">
       {% else %}
         <div>
@@ -25,7 +20,7 @@
               <hr />
           </div>
         {% endif %}
-      {% if has_url %}
+      {% if item.showpost %}
         </a>
       {% else %}
         </div>
@@ -40,17 +35,17 @@
             {% endif %}
           </span>
 
-          {% if item.year %}
+          {% if item.years %}
           <span class="dark-capsule card-date">
-              {{item.year}}
+              {{item.years}}
           </span>
           {% endif %}
 
         </span>
 
-        {% if item.desc != false %}
+        {% if item.description != false %}
         <p class="body">
-          {{ item.desc }}
+          {{ item.description }}
         </p>
         {% endif %}
 
@@ -76,19 +71,19 @@
         </div>
 
 
-        {% if item.capsules_primary and item.capsules_primary.size > 0 %}
+        {% if item.contributions and item.contributions.size > 0 %}
         <span class="capsule-group-header">{{ site.theme_config.home.title_primary_capsules }}</span>
         <div class="capsule-group capsule-group-primary">
-          {% for capsule in item.capsules_primary %}
+          {% for capsule in item.contributions %}
             <span class="capsule">{{ capsule }}</span>
           {% endfor %}
         </div>
         {% endif %}
 
-        {% if item.capsules_secondary and item.capsules_secondary.size > 0 %}
+        {% if item.tools and item.tools.size > 0 %}
         <span class="capsule-group-header">{{ site.theme_config.home.title_secondary_capsules }}</span>
         <div class="capsule-group capsule-group-secondary">
-          {% for capsule in item.capsules_secondary %}
+          {% for capsule in item.tools %}
             <span class="capsule">{{ capsule }}</span>
           {% endfor %}
         </div>
