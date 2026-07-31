@@ -6,29 +6,41 @@ permalink: /llms.txt
 
 > {{ site.description }}
 
-{% if site.projects.size > 0 %}
-## Projects
-
-{% assign sorted_projects = site.projects | sort: "order" %}
-{% for project in sorted_projects %}
-- [{{ project.title }}]({{ project.url | absolute_url }}): {{ project.desc | default: project.description }}
-  {% if project.contributions %}
-  - **Contributions:** {{ project.contributions | join: ", " }}
-  {% endif %}
-  {% if project.tools %}
-  - **Tools:** {{ project.tools | join: ", " }}
-  {% endif %}
-  {% if project.platforms %}
-  - **Links:** {% for p in project.platforms %}[{{ p.name | capitalize }}]({{ p.url }}){% unless forloop.last %}, {% endunless %}{% endfor %}
-  {% endif %}
+{% if site.contacts.size > 0 %}
+{% assign sorted_contacts = site.contacts | sort: "order" %}
+## Contacts & Profiles
+{% for contact in sorted_contacts %}
+{% assign link = contact.link%}
+{% if contact.is_resume %}
+{% assign link = 'https://camv.github.io' | append: contact.link %}
+{% endif %}
+- **{{ contact.title }}**: {{ link }}
 {% endfor %}
 {% endif %}
 
 {% if site.skills.size > 0 %}
 ## Skills
-
 {% assign sorted_skills = site.skills | sort: "order" %}
 {% for skill in sorted_skills %}
-- [{{ skill.title }}]({{ skill.url | absolute_url }}): {{ skill.skillset | join: ", " }}
+- **{{ skill.title }}**: {{ skill.skillset | join: ", " }}
 {% endfor %}
 {% endif %}
+
+{% if site.projects.size > 0 %}
+## Projects
+{% assign sorted_projects = site.projects | sort: "order" | reverse %}
+{% for project in sorted_projects %}
+### {{ project.title }}
+{{ project.desc | default: project.description }}
+{% if project.contributions %}
+- **Contributions:** {{ project.contributions | join: ", " }}
+{% endif %}
+{% if project.tools %}
+- **Tools:** {{ project.tools | join: ", " }}
+{% endif %}
+{% if project.platforms %}
+- **Links:** {% for p in project.platforms %}[{{ p.name | capitalize }}]({{ p.url }}){% unless forloop.last %}, {% endunless %}{% endfor %}
+{% endif %}
+{% endfor %}
+{% endif %}
+

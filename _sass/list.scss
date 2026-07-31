@@ -172,11 +172,26 @@ ul.card-grid {
   margin-right: 1em;
   text-align: justify;
 
+  .header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 1em;
+  }
+
+  h4 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: var(--text-secondary);
+  }
+
   hr {
     margin: 0.5em 0;
   }
 
 }
+
 
 
 
@@ -253,7 +268,8 @@ ul.card-grid {
     justify-content: flex-start;
     margin-top: 0.3em;
     margin-bottom: 0.3em;
-
+    padding-left: 0;      
+    list-style: none;
   }
 
   .capsule {
@@ -265,6 +281,7 @@ ul.card-grid {
     border: 1px solid var(--text-secondary);
     color: var(--text);
     background-color: var(--bg);
+    margin: 0;
   }
 
   .capsule-group-secondary .capsule {
@@ -401,3 +418,37 @@ html[data-theme="light"] .platform-links .platform-icon--dark {
 
 }
 
+ul.card-grid li.card {
+  
+  /* Reset the container list */
+  ul.capsule-group {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4em !important;
+    justify-content: flex-start !important;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    padding-left: 0 !important;
+    list-style: none !important;
+  }
+
+  /* Reset the individual capsule <li> items */
+  ul.capsule-group li.capsule {
+    display: inline-flex !important; /* Overrides display: block from ul.card-grid li */
+    width: auto !important;          /* Overrides width: 100% from ul.card-grid li */
+    margin: 0 !important;             /* Overrides margin-top/bottom from base li */
+    
+    padding: 0.2em 0.7em;
+    border-radius: 999px;
+    font-size: 0.7em;
+    line-height: 1.4;
+    border: 1px solid var(--text-secondary);
+    color: var(--text);
+    background-color: var(--bg);
+  }
+
+  ul.capsule-group-secondary li.capsule {
+    border-style: dashed;
+    opacity: 0.9;
+  }
+}

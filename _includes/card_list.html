@@ -27,13 +27,13 @@
       {% endif %}
       <div class="card-description-container">
         <span class="header">
-          <span>
+          <h3>
             {{ item.title }} 
 
             {% if item.highlight %}
               <mark>{{ item.highlight }}</mark>
             {% endif %}
-          </span>
+          </h3>
 
           {% if item.years %}
           <span class="dark-capsule card-date">
@@ -72,21 +72,21 @@
 
 
         {% if item.contributions and item.contributions.size > 0 %}
-        <span class="capsule-group-header">{{ site.theme_config.home.title_primary_capsules }}</span>
-        <div class="capsule-group capsule-group-primary">
+        <h4 class="capsule-group-header">{{ site.theme_config.home.title_primary_capsules }}</h4>
+        <ul class="capsule-group capsule-group-primary">
           {% for capsule in item.contributions %}
-            <span class="capsule">{{ capsule }}</span>
+            <li class="capsule">{{ capsule }}</li>
           {% endfor %}
-        </div>
+        </ul>
         {% endif %}
 
         {% if item.tools and item.tools.size > 0 %}
-        <span class="capsule-group-header">{{ site.theme_config.home.title_secondary_capsules }}</span>
-        <div class="capsule-group capsule-group-secondary">
+        <h4 class="capsule-group-header">{{ site.theme_config.home.title_secondary_capsules }}</h4>
+        <ul class="capsule-group capsule-group-secondary">
           {% for capsule in item.tools %}
-            <span class="capsule">{{ capsule }}</span>
+            <li class="capsule">{{ capsule }}</li>
           {% endfor %}
-        </div>
+        </ul>
         {% endif %}
       </div>
       <!-- <a href="{{ item.url }}">

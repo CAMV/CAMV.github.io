@@ -3,8 +3,11 @@ layout: default
 ---
 
 <header>
+  {% assign sorted_contacts = site.contacts | sort: "order" %}
+
+
   {% if site.theme_config.show_navbar == true %}
-    {% include horizontal_list.html collection=site.data.home.navbar_entries %}
+    {% include horizontal_list.html collection=sorted_contacts %}
     <div class="dashed"></div>
   {% endif %}
 

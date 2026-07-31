@@ -15,6 +15,8 @@ permalink: /:slug
 remote_theme: abhinavs/moonwalk
 
 collections:
+  contacts:
+    output: true
   skills:
     output: true
   projects:
@@ -93,11 +95,11 @@ plugins:
   - jekyll-seo-tag
 
 markdown_output:
-  collections: [posts, projects, skills, misc_projects]
+  collections: [posts, contacts, skills, projects, misc_projects]
 
 llms_output:
   index:
     enabled: false
   full:
-    collections: [posts, projects, skills, misc_projects]
+    collections: [posts, contacts, projects, skills, misc_projects]
     respect_markdown_output: true
