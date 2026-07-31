@@ -21,9 +21,15 @@ h2, h3, h4, h5 { margin-top: 1.5em; }
   font-family: "Inter", -apple-system, "avenir next", avenir, roboto, noto, ubuntu, "helvetica neue", helvetica, sans-serif;
   font-weight: bold;
   color : var(--headings);
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
 }
 
 .subtitles {

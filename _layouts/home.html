@@ -8,7 +8,7 @@ layout: default
   <div class="dashed"></div>
 {% endif %}
 
-  <p class="title">{{ site.title }}</p>
+  <h1 class="title">{{ site.title }}</h1>
   <p class="subtitles">{{ site.subtitle }}</p>
 
   {% assign show_description = false %}
@@ -31,6 +31,11 @@ layout: default
     {% assign show_skill_slide = true %}
   {% endif %}
 
+  {% assign show_skill_section = false %}
+  {% if site.theme_config.show_skill_section and has_skills_data %}
+    {% assign show_skill_section = true %}
+  {% endif %}
+
   {% if show_description or show_skill_card %}
   <div class="home-intro-grid{% if show_skill_card == false %} home-intro-grid--single{% endif %}">
     {% if show_description %}
@@ -47,12 +52,21 @@ layout: default
   </div>
   {% endif %}
 
-  {% if show_skill_slide %}
+  {% if show_skill_slide or show_skill_section %}
   <h2>{{ site.theme_config.home.title_skills }}</h2>
+  {% if show_skill_slide %}
   <div class="home-intro-skills-slide">
     {% include skills_slide_list.html collection=site.data.home.skills %}
   </div>
   {% endif %}
+  {% if show_skill_section %}
+  <div class="home-intro-skills-section">
+    {% include skills_section_list.html collection=site.data.home.skills %}
+  </div>
+  {% endif %}
+  {% endif %}
+
+
 </header>
 
 {{ content }}

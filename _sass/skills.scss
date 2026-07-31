@@ -105,6 +105,18 @@
   transform: scaleX(0);
 }
 
+.skills-section-list {
+  border: 1px solid var(--text-secondary);
+  border-radius: 0.25em;
+  background-color: var(--bg-secondary);
+  padding: 0.8em 1.2em;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
 @media (max-width: 740px) {
   .skills-card-panel {
     padding: 0.7em 0.9em;
@@ -129,6 +141,14 @@
 
   .skills-slideshow-viewport {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .skills-section-header {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-section-list {
+    grid-template-columns: 1fr !important;
   }
 
 }
@@ -200,3 +220,4 @@
   background-color: var(--links);
   transform: scale(1.2);
 }
+

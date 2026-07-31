@@ -1,0 +1,32 @@
+<div class="skills-panel">
+  <div class="skills-section-list">
+    {% for section in include.collection %}
+      <div class="skills-section">
+        <div class="skills-section-header">
+          {% assign has_theme_icons = section.icon_light or section.icon_dark %}
+          {% if has_theme_icons %}
+            {% if section.icon_light %}
+              <svg class="skills-section-icon skills-section-icon--light" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <image href="{{ section.icon_light }}" width="100" height="100" />
+              </svg>
+            {% endif %}
+            {% if section.icon_dark %}
+              <svg class="skills-section-icon skills-section-icon--dark" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+                <image href="{{ section.icon_dark }}" width="100" height="100" />
+              </svg>
+            {% endif %}
+          {% endif %}
+          <span>{{ section.title }}</span>
+        </div>
+
+        {% if section.skillset and section.skillset.size > 0 %}
+          <div class="skills-capsule-group">
+            {% for skill in section.skillset %}
+              <span class="skills-capsule">{{ skill }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
