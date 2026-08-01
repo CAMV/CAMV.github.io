@@ -17,7 +17,6 @@
               <video autoplay muted loop playsinline preload="metadata" aria-label="{{ item.video-description }}">
                 <source src="{{ item.video }}">
               </video>
-              <hr />
           </div>
         {% endif %}
       {% if item.showpost %}
@@ -26,7 +25,7 @@
         </div>
       {% endif %}
       <div class="card-description-container">
-        <span class="header">
+        <div class="header">
           <h3>
             {{ item.title }} 
 
@@ -41,7 +40,7 @@
           </span>
           {% endif %}
 
-        </span>
+        </div>
 
         {% if item.description != false %}
         <p class="body">
@@ -59,10 +58,10 @@
 
           <a href="{{ platform.url }}" class="platform-link" target="_blank" rel="noopener noreferrer">
             <svg class="platform-icon platform-icon--light">
-              <image href="{{ site.theme_config.icons[light_icon_key] }}" id="{{ key }}"/>
+              <image href="{{ site.theme_config.icons[light_icon_key] }}"/>
             </svg>
             <svg class="platform-icon platform-icon--dark">
-              <image href="{{ site.theme_config.icons[dark_icon_key] }}" id="{{ key }}"/>
+              <image href="{{ site.theme_config.icons[dark_icon_key] }}"/>
             </svg>
             <span class="platform-text">{{ site.theme_config.platforms[title_key] }}</span>
           </a>

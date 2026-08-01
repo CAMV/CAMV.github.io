@@ -1,7 +1,7 @@
 <div class="skills-section-list">
   {% for section in include.collection %}
     <div class="skills-section">
-      <h4 class="skills-section-header">
+      <h3 class="skills-section-header">
 
         {% assign key = section.icon %}
         {% assign light_icon_key = 'assets/icons/' | append: key | append: '_light.svg' %}
@@ -20,7 +20,7 @@
           {% endif %}
         {% endif %}
         <span>{{ section.title }}</span>
-      </h4>
+      </h3>
 
       {% if section.skillset and section.skillset.size > 0 %}
         <ul class="skills-capsule-group">
