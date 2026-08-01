@@ -5,6 +5,12 @@ url: https://camv.github.io
 lang: en_US
 image: assets/images/portfolio_preview.jpg
 
+defaults:
+  - scope:
+      path: "" # Applies to all files in the project
+    values:
+      image: /assets/images/og-preview.png
+
 baseurl: ""
 markdown: kramdown
 
