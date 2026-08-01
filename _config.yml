@@ -1,14 +1,33 @@
-title: Cristian Medina
-subtitle: Game Developer | Computer Engineer | 3D Hobbyist  
-author: Cristian Medina
+title: Cristian Medina | Unity Game Developer & Computer Engineer
+description: Portfolio of Cristian Medina, a Unity Game Developer and Computer Engineer specializing in C#, gameplay mechanics, tools, and 3D asset pipelines.
+tagline: Unity Game Developer | Computer Engineer | 3D Hobbyist
 url: https://camv.github.io
+lang: en_US
+
 baseurl: ""
 markdown: kramdown
-description: > 
+
+home_title: Cristian Medina
+home_subtitle: Unity Game Developer | Computer Engineer | 3D Hobbyist  
+home_description: > 
   I'm a Unity Game Developer and Computer Engineer with experience leading the development of gameplay systems,
   tools, content integration, debugging, and team coordination for video games and interactive applications. My
   background includes Unity, C#, Python, Blender workflows, and cross-functional production in remote team
   environments.
+
+author: Cristian Medina
+
+social:
+  name : Cristian Medina  
+  links:
+    - https://www.linkedin.com/in/cristian-medina-256140b5/
+    - https://waunman.itch.io/
+    - https://sketchfab.com/WaunMan
+    - https://github.com/camv
+
+seo:
+  type: "Person"
+  name: "Cristian Medina"
 
 permalink: /:slug
 
@@ -92,7 +111,6 @@ plugins:
   - jekyll-remote-theme
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
 
 markdown_output:
   collections: [posts, contacts, skills, projects, misc_projects]

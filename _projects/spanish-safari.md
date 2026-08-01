@@ -4,6 +4,7 @@ showpost: false
 order: 1
 years: MAR 2016 - AUG 2020
 video: assets/videos/spanish-safari.mp4
+video-description: Gameplay video showing different mini games and cinematic for Spanish Safari, an educational game that teaches Spanish to kids.
 # url: projects/spanish-safari
 description: An educational mobile and web-browser game designed to teach Spanish to children through story-based interactive mini-games. The game features a variety of subjects and activities that promote language learning in a fun and effective way.
 platforms:

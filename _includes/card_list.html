@@ -14,7 +14,7 @@
       {% endif %}
         {% if has_video %}
           <div class="card-video-container">
-              <video autoplay muted loop playsinline preload="metadata">
+              <video autoplay muted loop playsinline preload="metadata" aria-label="{{ item.video-description }}">
                 <source src="{{ item.video }}">
               </video>
               <hr />

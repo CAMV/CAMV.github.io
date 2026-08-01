@@ -11,8 +11,8 @@ layout: default
     <div class="dashed"></div>
   {% endif %}
 
-    <h1 class="title">{{ site.title }}</h1>
-    <p class="subtitles">{{ site.subtitle }}</p>
+    <h1 class="title">{{ site.home_title }}</h1>
+    <p class="subtitles">{{ site.home_subtitle }}</p>
 
     {% assign sorted_skills = site.skills | sort: "order" %}
 
@@ -45,7 +45,7 @@ layout: default
       <div class="home-intro-grid{% if show_skill_card == false %} home-intro-grid--single{% endif %}">
         {% if show_description %}
         <div class="home-intro-description">
-          <p>{{ site.description }}</p>
+          <p>{{ site.home_description }}</p>
         </div>
         {% endif %}
 

@@ -4,6 +4,7 @@ showpost: false
 order: 3
 years: JUL 2024 - OCT 2025
 video: assets/videos/jason-maxx.mp4
+video-description: Gameplay video showing exploration, interrogation and clue-finding mechanics for Jason Maxx, a comedy detective game.
 # url: _projects/jason-maxx
 description: A comedy detective game, where you play as hardcore detective Jason Maxx. The city is dark, the suspects are weirdos, and the graphics party like it’s 1999. Explore, interrogate. Can Jason solve the mystery, even when absurdity takes over?
 platforms:
