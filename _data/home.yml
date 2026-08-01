@@ -1,6 +1,7 @@
 footer_entries:
+
   - title: Feed
-    url: feed.xml
+    link: feed.xml
 
   - title: LLMS.txt
-    url: llms.txt
+    link: llms.txt
