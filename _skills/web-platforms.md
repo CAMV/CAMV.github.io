@@ -1,6 +1,6 @@
 ---
 title: Web Platforms
-icon: framework
+icon: web-platforms
 order: 6
 skillset:
     - Magento
