@@ -1,15 +1,15 @@
-title: Cristian Medina | Unity Game Developer & Computer Engineer
+title: Cristian Medina - Unity Game Developer & Computer Engineer
 description: Portfolio of Cristian Medina, Game Developer and Computer Engineer using C#, Unity and 3D asset pipelines.
 tagline: Unity Game Developer | Computer Engineer | 3D Hobbyist
 url: https://camv.github.io
 lang: en_US
-image: assets/images/portfolio_preview.jpg
+image: assets/images/og-portfolio.png
 
 defaults:
   - scope:
       path: "" # Applies to all files in the project
     values:
-      image: /assets/images/og-preview.png
+      image: assets/images/og-portfolio.png
 
 baseurl: ""
 markdown: kramdown
